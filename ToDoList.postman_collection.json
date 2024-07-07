@@ -1,0 +1,618 @@
+{
+	"info": {
+		"_postman_id": "1b63551b-c65e-4f30-8f12-9379fc9bcd66",
+		"name": "ToDoList",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33989510"
+	},
+	"item": [
+		{
+			"name": "Notes",
+			"item": [
+				{
+					"name": "GetNoteById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5081/api/v1/function/note/get-one?Id=30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5081",
+							"path": [
+								"api",
+								"v1",
+								"function",
+								"note",
+								"get-one"
+							],
+							"query": [
+								{
+									"key": "Id",
+									"value": "30"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetNotes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}"
+						},
+						"url": {
+							"raw": "http://localhost:5081/api/v1/function/note/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5081",
+							"path": [
+								"api",
+								"v1",
+								"function",
+								"note",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateNote",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Title\" : \"test5\",\r\n    \"Text\" : \"test\",\r\n    \"Tags\" : [\r\n        \"test2\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5081/api/v1/function/note/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5081",
+							"path": [
+								"api",
+								"v1",
+								"function",
+								"note",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateNote",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\" : 25,\r\n    \"Title\" : \"test5\",\r\n    \"Text\" : \"test\",\r\n    \"Tags\" : [\r\n        \"test10\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5081/api/v1/function/note/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5081",
+							"path": [
+								"api",
+								"v1",
+								"function",
+								"note",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteNote",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\" : 29\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5081/api/v1/function/note/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5081",
+							"path": [
+								"api",
+								"v1",
+								"function",
+								"note",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddTags",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\" : 23,\r\n    \"Tags\" : [\r\n        \"\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5081/api/v1/function/note/addtags",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5081",
+							"path": [
+								"api",
+								"v1",
+								"function",
+								"note",
+								"addtags"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RemoveTags",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\" : 23,\r\n    \"TagID\" : \"8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5081/api/v1/function/note/removetags",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5081",
+							"path": [
+								"api",
+								"v1",
+								"function",
+								"note",
+								"removetags"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reminders",
+			"item": [
+				{
+					"name": "GetReminderById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5081/api/v1/function/reminder/get-one?Id=7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5081",
+							"path": [
+								"api",
+								"v1",
+								"function",
+								"reminder",
+								"get-one"
+							],
+							"query": [
+								{
+									"key": "Id",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetReminders",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}"
+						},
+						"url": {
+							"raw": "http://localhost:5081/api/v1/function/reminder/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5081",
+							"path": [
+								"api",
+								"v1",
+								"function",
+								"reminder",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateReminder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Title\" : \"test2\",\r\n    \"Text\" : \"test\",\r\n    \"ReminderTime\": \"2025-07-01T01:00:00\",\r\n    \"Tags\" : [\r\n        \"test10\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5081/api/v1/function/reminder/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5081",
+							"path": [
+								"api",
+								"v1",
+								"function",
+								"reminder",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateReminder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\" : 3,\r\n    \"Title\" : \"test1\",\r\n    \"Text\" : \"test2\",\r\n    \"ReminderTime\": \"2024-07-01T01:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5081/api/v1/function/reminder/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5081",
+							"path": [
+								"api",
+								"v1",
+								"function",
+								"reminder",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteReminder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\" : 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5081/api/v1/function/reminder/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5081",
+							"path": [
+								"api",
+								"v1",
+								"function",
+								"reminder",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddTags",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\" : 23,\r\n    \"Tags\" : [\r\n        \"test2\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5081/api/v1/function/reminder/addtags",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5081",
+							"path": [
+								"api",
+								"v1",
+								"function",
+								"reminder",
+								"addtags"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RemoveTags",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\" : 23,\r\n    \"Tags\" : [\r\n        \"test2\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5081/api/v1/function/reminder/removetags",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5081",
+							"path": [
+								"api",
+								"v1",
+								"function",
+								"reminder",
+								"removetags"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tags",
+			"item": [
+				{
+					"name": "GetTagById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5081/api/v1/function/tag/get-one?Id=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5081",
+							"path": [
+								"api",
+								"v1",
+								"function",
+								"tag",
+								"get-one"
+							],
+							"query": [
+								{
+									"key": "Id",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetTags",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}"
+						},
+						"url": {
+							"raw": "http://localhost:5081/api/v1/function/tag/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5081",
+							"path": [
+								"api",
+								"v1",
+								"function",
+								"tag",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateTags",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\" : \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5081/api/v1/function/tag/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5081",
+							"path": [
+								"api",
+								"v1",
+								"function",
+								"tag",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateTags",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\" : 6,\r\n    \"Name\" : \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5081/api/v1/function/tag/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5081",
+							"path": [
+								"api",
+								"v1",
+								"function",
+								"tag",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteTags",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\" : 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5081/api/v1/function/tag/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5081",
+							"path": [
+								"api",
+								"v1",
+								"function",
+								"tag",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
